@@ -208,7 +208,9 @@ const ModalRequest = ({ id, data }) => {
           <div className="w-full flex items-center justify-between gap-2 bg-gradient px-4 py-2 mt-4 rounded ">
             <label className="text-[14px] text-white">Total</label>
             <div className="flex gap-4 items-center">
-              <span className="text-[14px] text-white font-semibold">Rp. 100.000.00</span>
+              <span className="text-[14px] text-white font-semibold">
+                {new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR" }).format(qty * data?.harga)}
+              </span>
             </div>
           </div>
 

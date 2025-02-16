@@ -5,6 +5,7 @@ import Navbar from "./navbar";
 import { Button } from "../ui/button";
 import MobileNavbar from "./mobile-nav";
 import { usePathname } from "next/navigation";
+import { Toaster } from "@/components/ui/toaster";
 
 const MainLayout = ({ children }) => {
   const pathname = usePathname();
@@ -28,7 +29,7 @@ const MainLayout = ({ children }) => {
 
   return (
     <div className="w-screen h-screen bg-white">
-      {" "}
+      <Toaster />{" "}
       <div className="w-full h-full grid grid-cols-12 py-14 md:py-0 ">
         <Navbar />
         <MobileNavbar />

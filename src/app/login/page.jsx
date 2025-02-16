@@ -4,6 +4,7 @@ import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, Di
 import { Button } from "@/components/ui/button";
 import axios from "axios";
 import { useToast } from "@/hooks/use-toast";
+import { Toaster } from "@/components/ui/toaster";
 const LoginPage = () => {
   const [credentials, setCredentials] = useState({
     email: "",
@@ -29,6 +30,7 @@ const LoginPage = () => {
 
   return (
     <div className="w-screen h-screen overflow-x-hidden ">
+      <Toaster />
       <div className="w-full h-full flex justify-center bg-gradient items-center px-10">
         <div className=" w-full lg:w-4/12 bg-transparent p-10 shadow-lg border rounded-lg ">
           <form onSubmit={handleSubmit} className="flex flex-col gap-3">
